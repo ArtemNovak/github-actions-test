@@ -1,0 +1,23 @@
+name: Repository Dispatch
+
+on:
+  repository_dispatch:
+    types:
+      - build
+
+jobs:
+  actions-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: List Files
+        run: |
+          pwd
+          ls -la
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
+          echo $GITHUB_WORKSPACE
+          echo "Custom Payload - Integration: ${{ github.event.client_payload.integration }}"
+          echo "Custom Payload - Unit: ${{ github.event.client_payload.unit }}"
