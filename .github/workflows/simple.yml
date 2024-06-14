@@ -22,6 +22,7 @@ jobs:
 
     another-shell:
         runs-on: windows-latest
+        needs: run-shell-command
         steps:
             - name: powershell on windows
               run: Get-Location
