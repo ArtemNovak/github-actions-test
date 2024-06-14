@@ -4,9 +4,12 @@ on:
     push
 
 jobs:
-    run-shell-command:
+    actions-workflow:
         runs-on: ubuntu-latest
         steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
             - name: List Files
               run: |
                 pwd
