@@ -1,6 +1,8 @@
 name: Shell Commands
 
-on: [ pull_request ]
+on:
+    issue:
+        - closed
 
 jobs:
     run-shell-command:
