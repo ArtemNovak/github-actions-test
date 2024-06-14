@@ -1,8 +1,7 @@
 name: Shell Commands
 
 on:
-    issue:
-        - closed
+  issue:
 
 jobs:
     run-shell-command:
