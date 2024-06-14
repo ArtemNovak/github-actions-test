@@ -5,7 +5,7 @@ on:
         types:
             - build
     # push: 
-    push_request:
+    pull_request:
         types:
             - closed
             - assigned
