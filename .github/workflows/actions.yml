@@ -1,13 +1,22 @@
 name: Actions Workflow
 
 on:
-    # push: 
-    pull_request:
-        types:
-            - closed
-            - assigned
-            - opened
-            - reopened
+    push:
+        branches:
+            # - main
+            # - feature/*
+            - feature/**
+            - '!feature/featC'
+        # tags:
+        #     - v1.*
+        # path:
+        #     - '**.js'
+    # pull_request:
+    #     types:
+    #         - closed
+    #         - assigned
+    #         - opened
+    #         - reopened
 
 jobs:
     actions-workflow:
