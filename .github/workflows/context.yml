@@ -10,3 +10,15 @@ jobs:
         if: github.event_name == 'push'
         run: |
           echo ${{ format('Hello {0}, {2}, {1}', 'Dildo', 'Bildo', 'Beggins') }}
+          echho 
+
+      - name: even if fails
+        if: failure()
+        run: echo "Hello"
+
+      - name: always
+        if: always()
+        run: echo "Always"
+
+      - name: simple stage
+        run: echo "NOT RUN"
