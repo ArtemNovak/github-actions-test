@@ -3,9 +3,9 @@ name: context file
 on: push
 
 jobs:
-    context:
-        runs-on: ubuntu-latest
-        steps:
-            - name: testing contexts
-              runs: |
-                echo ${{format('Hello {0}, {2}, {1}', 'Dildo', 'Bildo', 'Beggins')}}
+  context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing contexts
+        run: |
+          echo ${{ format('Hello {0}, {2}, {1}', 'Dildo', 'Bildo', 'Beggins') }}
