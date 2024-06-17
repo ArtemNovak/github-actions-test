@@ -7,5 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing contexts
+        if: github.event_name == 'push'
         run: |
           echo ${{ format('Hello {0}, {2}, {1}', 'Dildo', 'Bildo', 'Beggins') }}
